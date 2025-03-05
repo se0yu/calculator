@@ -16,7 +16,7 @@ public class Main {
                 System.out.println("양의 정수 혹은 0을 입력해주세요.");
                 continue;
             }
-
+            Scanner scanner = new Scanner(System.in);
             //사칙연산 기호 입력 받기
             System.out.print("사칙연산 기호 입력(+,-,*,/) : ");
             char cal = sc.next().charAt(0);
