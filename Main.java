@@ -24,9 +24,12 @@ public class Main {
             //calculate 함수 호출(연산 할 숫자와 사칙연산 기호)
             calculator.calculate(num1,num2,cal);
 
+            //결과 리스트 출력
+            System.out.println("저장된 결과 리스트를 출력하시겠습니까?(yes 입력시 출력)");
+            calculator.printResultList(sc.next());
             //결과 삭제
             System.out.print("저장된 결과를 삭제 하시겠습니까?(delete 입력시 가장 오래된 결과 삭제,clear 입력시 전부 삭제)");
-            calculator.deleteResult(sc.next());
+            calculator.checkResultList(sc.next());
 
             //exit 입력시 프로그램 종료.
             System.out.print("계속하시겠습니까? (exit 입력시 종료)");

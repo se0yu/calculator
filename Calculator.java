@@ -3,7 +3,7 @@ package assign.calculator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Calculator{
+public class Calculator {
 
 
     private int result = 0;
@@ -14,13 +14,15 @@ public class Calculator{
     }
 
 
-
-
-
     private void printResult() {
-        System.out.println("결과 : " + getResultList());
+        System.out.println("결과 : " + result);
     }
 
+    public void printResultList(String check) {
+        if (check.equals("yes")) {
+            System.out.println(getResultList());
+        }
+    }
 
     private int sum(int num1, int num2) {
         result = num1 + num2;
@@ -49,7 +51,7 @@ public class Calculator{
     public void calculate(int num1, int num2, char cal) {
         switch (cal) {
             case '+' -> {
-                sum(num1,num2);
+                sum(num1, num2);
             }
             case '-' -> {
                 sub(num1, num2);
@@ -69,18 +71,26 @@ public class Calculator{
         printResult();
     }
 
-     public void deleteResult(String check) {
+
+    //입력받은 check 값에 따라 결과 리스트 삭제&초기화
+    public void checkResultList(String check){
         if(check.equals("delete")){
-            if(!resultList.isEmpty()){
+            deleteResult();
+        } else if (check.equals("clear")) {
+            clearResult();
+        }
+    }
+
+    public void deleteResult() {
+            if (!resultList.isEmpty()) {
                 resultList.remove(0);
                 System.out.println(resultList);
-            }else {
+            } else {
                 System.out.println("저장된 결과가 없습니다.");
-            }
-        } else if (check.equals("clear")) {
+        }
+    }
+    public void clearResult() {
             resultList.clear();
             System.out.println(resultList);
-        }
-
     }
 }
