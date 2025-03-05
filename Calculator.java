@@ -9,9 +9,12 @@ public class Calculator{
     private int result = 0;
     private final List<Integer> resultList = new ArrayList<>();
 
+    public List<Integer> getResultList() {
+        return new ArrayList<>(resultList);
+    }
 
     private void printResult() {
-        System.out.println("결과 : " + resultList);
+        System.out.println("결과 : " + getResultList());
     }
 
 
@@ -62,7 +65,7 @@ public class Calculator{
         printResult();
     }
 
-     void deleteResult(String check) {
+     public void deleteResult(String check) {
         if(check.equals("delete")){
             if(!resultList.isEmpty()){
                 resultList.remove(0);
