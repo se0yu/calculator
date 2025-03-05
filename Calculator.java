@@ -13,6 +13,10 @@ public class Calculator{
         return new ArrayList<>(resultList);
     }
 
+
+
+
+
     private void printResult() {
         System.out.println("결과 : " + getResultList());
     }
@@ -73,6 +77,9 @@ public class Calculator{
             }else {
                 System.out.println("저장된 결과가 없습니다.");
             }
+        } else if (check.equals("clear")) {
+            resultList.clear();
+            System.out.println(resultList);
         }
 
     }

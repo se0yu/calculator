@@ -16,7 +16,6 @@ public class Main {
                 System.out.println("양의 정수 혹은 0을 입력해주세요.");
                 continue;
             }
-            Scanner scanner = new Scanner(System.in);
             //사칙연산 기호 입력 받기
             System.out.print("사칙연산 기호 입력(+,-,*,/) : ");
             char cal = sc.next().charAt(0);
@@ -26,7 +25,7 @@ public class Main {
             calculator.calculate(num1,num2,cal);
 
             //결과 삭제
-            System.out.print("저장된 결과를 삭제 하시겠습니까?(delete 입력시 삭제)");
+            System.out.print("저장된 결과를 삭제 하시겠습니까?(delete 입력시 가장 오래된 결과 삭제,clear 입력시 전부 삭제)");
             calculator.deleteResult(sc.next());
 
             //exit 입력시 프로그램 종료.
