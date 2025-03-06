@@ -1,11 +1,11 @@
-package assign.calculator;
+package assign.calculator.level3;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Calculator calculator = new Calculator();
+        ArithmeticCalculator calculator = new ArithmeticCalculator();
         while (true) {
             System.out.println("실행할 기능을 선택하세요.");
             System.out.println("1. 연산하기 | 2. 결과 리스트 출력하기 | 3. 결과 삭제하기 | 4. 프로그램 종료)");
@@ -34,7 +34,6 @@ public class Main {
                     System.out.println(calculator.getResultList());
                 }
 
-
                 case 3 -> {
                     //결과 삭제
                     System.out.print("저장된 결과를 삭제 하시겠습니까?(1.가장 오래된 결과 삭제 | 2.전부 삭제)");
@@ -50,7 +49,7 @@ public class Main {
                     }
                 }
                 default -> {
-                    System.out.println("잘못된 숫자를 입력했습니다.");
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 }
 
             }
