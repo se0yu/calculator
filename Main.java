@@ -31,7 +31,7 @@ public class Main {
                 }
                 //결과 리스트 출력
                 case 2 -> {
-                    System.out.println(calculator.getResultList());
+                    calculator.printResultList();
                 }
 
                 case 3 -> {
